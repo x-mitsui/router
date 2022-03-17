@@ -15,6 +15,26 @@ router.use("/", (ctx, next) => {
   debug("路由使用了中间件");
   next();
 });
+router.post("/", (ctx, next) => {
+  debug("路由使用了中间件");
+  next();
+});
+router.del("/", (ctx, next) => {
+  debug("路由使用了中间件");
+  next();
+});
+router.get("/foo/:id", (ctx, next) => {
+  debug("路由使用了中间件");
+  next();
+});
+router.get("/foo/3", (ctx, next) => {
+  debug("路由使用了中间件");
+  next();
+});
+router.del("/foo", (ctx, next) => {
+  debug("路由使用了中间件");
+  next();
+});
 app.use(router.routes()).use(router.allowedMethods());
 
 var server = http.createServer(app.callback());
