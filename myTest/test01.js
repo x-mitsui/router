@@ -23,11 +23,11 @@ router.del("/", (ctx, next) => {
   debug("路由使用了中间件");
   next();
 });
-router.get("/foo/:id", (ctx, next) => {
+router.get("/foo/3", (ctx, next) => {
   debug("路由使用了中间件");
   next();
 });
-router.get("/foo/3", (ctx, next) => {
+router.get("/foo/:id", (ctx, next) => {
   debug("路由使用了中间件");
   next();
 });
